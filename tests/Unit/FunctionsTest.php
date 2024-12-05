@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class FunctionsTest extends TestCase {
 
-    public function test_example(): void {
+    public function test_email(): void {
         $result = validate_email('j@admin.com');
         $this->assertTrue($result);
     }
