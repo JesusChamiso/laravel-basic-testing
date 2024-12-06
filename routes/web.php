@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -10,8 +11,4 @@ Route::get('/', function () {
 Route::get('about', function () {
     return view('welcome');
 });
-Route::view('profile', 'profile');
-Route::post('profile', function (Request $request) {
-    $request->file('photo')->store('profiles');
-    return redirect('profile');
-})->name('profile');
+Route::post('profile', [ProfileController::class, 'upload'])->name('profile');
