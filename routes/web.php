@@ -11,4 +11,5 @@ Route::get('/', function () {
 Route::get('about', function () {
     return view('welcome');
 });
+Route::view('profile', 'profile');
 Route::post('profile', [ProfileController::class, 'upload'])->name('profile');
