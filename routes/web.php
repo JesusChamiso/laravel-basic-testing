@@ -19,3 +19,4 @@ Route::view('profile', 'profile');
 Route::post('profile', [ProfileController::class, 'upload'])->name('profile');
 
 Route::post('tags', [TagController::class, 'store']);
+Route::delete('tags/{tag}', [TagController::class, 'destroy']);
